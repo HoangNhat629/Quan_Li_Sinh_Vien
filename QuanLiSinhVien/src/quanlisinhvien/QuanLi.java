@@ -810,43 +810,37 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     public void timKiem(String name, String MSSV,int SoTinChi) {
         DefaultTableModel TimKiem = (DefaultTableModel) QuanliSinhVien1.getModel();
         TimKiem.setNumRows(0);
+        List<StudentInf> dssvTimKiem = new ArrayList<>();
         for (StudentInf sv : dssv) {
             if (name.equals(sv.getTen())&&MSSV.equals("")&&SoTinChi==0) {
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
+                  dssvTimKiem.add(sv);
             } else if(name.equals(sv.getTen())&&MSSV.equals(sv.getMSSV())&&SoTinChi==0){
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
+                  dssvTimKiem.add(sv);
             }else if(name.equals(sv.getTen())&&MSSV.equals("")&&SoTinChi==sv.getTinChi()){
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
+                  dssvTimKiem.add(sv);
             } else if(name.equals(sv.getTen())&&MSSV.equals(sv.getMSSV())&&SoTinChi==sv.getTinChi()){
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
+                dssvTimKiem.add(sv);
             } else if(name.equals("")&&MSSV.equals(sv.getMSSV())&&SoTinChi==0){
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
+                dssvTimKiem.add(sv);
             } else if(name.equals("")&&MSSV.equals(sv.getMSSV())&&SoTinChi==sv.getTinChi()){
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
+                dssvTimKiem.add(sv);
             } else if(name.equals("")&&MSSV.equals("")&&SoTinChi==sv.getTinChi()){
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
-                sv.hienThiThongTin();
-                ErrorTimKiem.setText("");
-            }  else{
+                dssvTimKiem.add(sv);
+            } 
+        } 
+        System.out.println(dssvTimKiem.size());
+         if(dssvTimKiem.size()==0){
                 StudentInf svinf = new StudentInf();
-                TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
                 svinf.hienThiThongTin();
                 TimKiem.setNumRows(0);
                 ErrorTimKiem.setText("Khong Tim Thay Sinh Vien");
-            }
-        } 
+            }else{
+             for(StudentInf sv: dssvTimKiem){
+                 TimKiem.addRow(new Object[]{sv.getTen(),sv.getMSSV(),sv.getHinhThucDangKi(),sv.getSoHocPhan(),sv.getTinChi(),sv.getNamHoc(),HocPhiTinChi(sv.getTinChi())});
+                 sv.hienThiThongTin();
+                 ErrorTimKiem.setText("");
+             }
+        }
     }
     
     //None
