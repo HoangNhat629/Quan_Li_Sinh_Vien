@@ -9,7 +9,7 @@ package quanlisinhvien;
  *
  * @author admin
  */
-
+//Nguyen Duc Minh
 //Interface
 interface QuanLiThongTin {
      //Ham Them sv

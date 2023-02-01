@@ -11,6 +11,7 @@ import java.util.List;
  *
  * @author admin
  */
+//Hoang Ngoc Nhat
 public class ThongKe extends ThongTinThongKe{
     // Phuong thuc
     //CONSTRUCTOR

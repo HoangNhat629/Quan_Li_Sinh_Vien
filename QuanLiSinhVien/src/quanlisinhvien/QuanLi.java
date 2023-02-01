@@ -652,12 +652,14 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }
     
     // Ham them sinh vien vao danh sach
+    //Hoang Ngoc Nhat
     @Override
     public void themSV(StudentInf sv) {
         dssv.add(sv);
     }
     
     //Ham tinh hoc phi theo tin chi
+    //Hoang Ngoc Nhat
     @Override
     public double HocPhiTinChi(int tinchi){
         int phiTinChi = Integer.parseInt(MotTinChi.getText()); 
@@ -665,6 +667,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }
     
     //Ham Tinh hoc phi theo chuong trinh hoc
+    //Hoang Ngoc Nhat
     @Override
     public double HocPhiChuongTrinhMau(int hocphan){
         int phiQuanLi = Integer.parseInt(PhiQuanLi.getText());
@@ -673,6 +676,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }
     
     //Ham chon tinh thuc hoc theo tin chi
+    //Hoang Ngoc Nhat
     private void TinChiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TinChiActionPerformed
         if(TinChi.isSelected()){
             ChuongTrinh.setSelected(false);
@@ -680,6 +684,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_TinChiActionPerformed
     
     //Ham chon tinh thuc hoc theo chuong trinh hoc
+    //Hoang Ngoc Nhat
     private void ChuongTrinhActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChuongTrinhActionPerformed
         if(ChuongTrinh.isSelected()){
             TinChi.setSelected(false);
@@ -687,6 +692,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_ChuongTrinhActionPerformed
     
     //Ham lay gia tri da chon
+    //Hoang Ngoc Nhat
     private void QuanliInhVienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_QuanliInhVienMouseClicked
         DefaultTableModel QuanLiSinhVien = (DefaultTableModel) QuanliInhVien.getModel();
         int i= QuanliInhVien.getSelectedRow();
@@ -699,6 +705,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_QuanliInhVienMouseClicked
     
     //Ham xoa gia tri da chon
+    //Hoang Ngoc Nhat
     private void DeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DeleteActionPerformed
         DefaultTableModel QuanLiSinhVien = (DefaultTableModel) QuanliInhVien.getModel();
         int i = QuanliInhVien.getSelectedRow();
@@ -716,6 +723,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_DeleteActionPerformed
     
     //Ham chinh sua gia tri da chon
+    //Hoang Ngoc Nhat
     private void EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EditActionPerformed
         DefaultTableModel QuanLiSinhVien = (DefaultTableModel) QuanliInhVien.getModel();
         int i= QuanliInhVien.getSelectedRow();
@@ -757,6 +765,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
         hienThiDanhSach();
     }//GEN-LAST:event_EditActionPerformed
 
+    //Hoang Ngoc Nhat
     private void SubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SubmitActionPerformed
         DefaultTableModel QuanLiSinhVien = (DefaultTableModel) QuanliInhVien.getModel();
         String hovaten = HoVaTen.getText();
@@ -796,6 +805,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
         hienThiDanhSach();
     }//GEN-LAST:event_SubmitActionPerformed
     // Ham hien thi danh sach sinh vien
+    //Hoang Ngoc Nhat
     @Override
     public void hienThiDanhSach() {
         int i = 1;
@@ -806,6 +816,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
         }
     }
     // Ham tim kiem sinh vien theo ten, MSSV, So Tin Chi
+    //Nguyen Duc Minh
     @Override
     public void timKiem(String name, String MSSV,int SoTinChi) {
         DefaultTableModel TimKiem = (DefaultTableModel) QuanliSinhVien1.getModel();
@@ -849,6 +860,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_QuanliSinhVien1MouseClicked
     
     //Ham thuc hien tim kiem du lieu nhap vao
+    //Hoang Ngoc Nhat
     private void LookUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LookUpActionPerformed
        String TenLookUp = HoTenTimKiem.getText();
        String MSSVLookUp = MSSVTimKiem.getText();
@@ -862,6 +874,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_SoHocPhanActionPerformed
 
     //Ham cap quyen chinh sua nhung thong tin duoc yeu cau: hoc phi 1 tin chi , hoc phi 1 hoc phan, he so tin chi 1 hoc phan, phi quan li 
+    //Nguyen Duc Minh
     private void Edit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Edit1ActionPerformed
         MotTinChi.setEditable(true);
         MotHocPhan.setEditable(true);
@@ -873,6 +886,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_Edit1ActionPerformed
 
     //Ham Tinh so tin chi ung voi so so hoc phan dang ki 
+    //Hoang Ngoc Nhat
     private void TinhTinChiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TinhTinChiActionPerformed
          TinChiDangKi.setEditable(true);
          int sohocphan = Integer.parseInt(SoHocPhan.getText());
@@ -881,6 +895,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_TinhTinChiActionPerformed
 
     //Ham Cap nhat cac thong tin duoc yeu cau: hoc phi 1 tin chi , hoc phi 1 hoc phan, he so tin chi 1 hoc phan, phi quan li 
+    //Nguyen Duc Minh
     private void updateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateActionPerformed
         MotTinChi.setEditable(false);
         MotHocPhan.setEditable(false);
@@ -891,6 +906,7 @@ public class QuanLi extends javax.swing.JFrame implements QuanLiThongTin{
     }//GEN-LAST:event_updateActionPerformed
 
     //Ham hien du lieu thong ke
+    //Hoang Ngoc Nhat+Nguyen Duc Minh
     private void ThongKeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThongKeActionPerformed
         String thoigian = TgianThongKe.getText();
         ThongKe thongke = new ThongKe(thoigian,dssv);

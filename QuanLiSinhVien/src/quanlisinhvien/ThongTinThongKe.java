@@ -9,6 +9,7 @@ package quanlisinhvien;
  *
  * @author admin
  */
+//Hoang Ngoc Nhats
 public class ThongTinThongKe {
         //Thuoc Tinh
         public int count ;

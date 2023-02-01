@@ -11,6 +11,7 @@ import java.util.Scanner;
  *
  * @author admin
  */
+//Nguyen Duc Minh
 public class StudentInf  {
      // Thuoc tinh
     private String NamHoc;
