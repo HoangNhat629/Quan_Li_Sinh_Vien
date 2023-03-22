@@ -3,6 +3,7 @@
 ``` bash
 - Language: Java
 - GUI: JavaSwing
+```
 ## Functions:
 - Control the information of student: create, delete. edit. view
 - Search by name, student code, university credit
