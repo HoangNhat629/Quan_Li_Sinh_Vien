@@ -1,7 +1,7 @@
 # Quan_Li_Sinh_Vien Form
 ## Technology
 ``` bash
-- Language: Java
+- Machine Language: Java
 - GUI: JavaSwing
 ```
 ## Functions:
